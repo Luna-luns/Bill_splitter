@@ -1,4 +1,6 @@
+import random
 from bill import Bill
+from person import Person
 
 
 class Friends:
@@ -9,3 +11,6 @@ class Friends:
         result = round(bill.total / len(self.friends_list), 2)
 
         return dict.fromkeys([friend.name for friend in self.friends_list], result)
+
+    def choose_random_friend(self) -> Person:
+        return random.choice(self.friends_list)

@@ -4,6 +4,20 @@ from bill import Bill
 from number_error import NumberError
 
 
+def confirm_lucky_one() -> bool:
+    answer = input('\n' + 'Do you want to use the "Who is lucky?" feature? Write Yes/No:' + '\n').strip()
+
+    return answer == 'Yes'
+
+
+def print_lucky_one(random_friend: Person) -> None:
+    print(f'{random_friend} is the lucky one!')
+
+
+def print_nobody_lucky() -> None:
+    print('No one is going to be lucky')
+
+
 def ask_friends_number() -> int:
     friends_number = int(input('Enter the number of friends joining (including you):' + '\n').strip())
 
