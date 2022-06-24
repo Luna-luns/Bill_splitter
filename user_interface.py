@@ -11,11 +11,11 @@ def confirm_lucky_one() -> bool:
 
 
 def print_lucky_one(random_friend: Person) -> None:
-    print(f'{random_friend} is the lucky one!')
+    print(f'\n{random_friend} is the lucky one!\n')
 
 
 def print_nobody_lucky() -> None:
-    print('No one is going to be lucky')
+    print('\n' + 'No one is going to be lucky' + '\n')
 
 
 def ask_friends_number() -> int:

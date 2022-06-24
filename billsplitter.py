@@ -10,8 +10,12 @@ try:
     if lucky:
         random_friend = friends.choose_random_friend()
         user_interface.print_lucky_one(random_friend)
+        new_dict_lucky = friends.split_bill_lucky(bill, random_friend)
+        user_interface.print_dict(new_dict_lucky)
     else:
         user_interface.print_nobody_lucky()
+        new_dict = friends.split_bill(bill)
+        user_interface.print_dict(new_dict)
 
 except NumberError as error:
     user_interface.show_error(error)
